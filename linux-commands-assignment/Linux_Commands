@@ -1,1 +1,91 @@
+Assignment 01 – Linux Commands
 
+Question1:
+Create a directory named test_dir.
+Inside test_dir, create an empty file called example.txt.
+Rename example.txt to renamed_example.txt.
+
+Command:
+mkdir test_dir
+cd test_dir
+touch example.txt
+mv example.txt renamed_example.txt
+
+Explanation:
+
+->mkdir test_dir creates a new directory.
+->touch example.txt creates an empty file.
+->mv renames the file.
+
+Question2:
+Display the contents of /etc/passwd.
+Display only the first 5 lines.
+Display only the last 5 lines.
+
+Command:
+cat /etc/passwd
+head -n 5 /etc/passwd
+tail -n 5 /etc/passwd
+
+Explanation:
+*cat displays the entire file.
+*head -n 5 shows the first 5 lines.
+*tail -n 5 shows the last 5 lines.
+
+
+Question3:
+Find all lines containing the word "root" in /etc/passwd.
+
+Command:
+grep "root" /etc/passwd
+
+Explanation:
+*grep searches for a specific pattern in a file.
+*Displays all lines that contain the word root.
+
+Question4:
+Compress the test_dir directory into test_dir.zip.
+Unzip it into a directory named unzipped_dir.
+
+Command:
+zip -r test_dir.zip test_dir
+mkdir unzipped_dir
+unzip test_dir.zip -d unzipped_dir
+
+Explanation:
+
+*zip -r compresses a directory recursively.
+*unzip extracts files from a zip archive.
+* -d specifies destination directory.
+
+Question5:
+Download a file from a URL using wget.
+
+Command:
+wget https://example.com/sample.txt
+
+Explanation:
+*wget downloads files from the internet.
+*The file is saved in the current directory.
+
+Question6:
+Create a file named secure.txt and make it read-only for everyone.
+
+Command:
+touch secure.txt
+chmod 444 secure.txt
+
+Explanation:
+*touch creates a new file.
+*chmod 444 gives read-only permission to owner, group, and others.
+
+Question7:
+Create an environment variable MY_VAR with value "Hello, Linux!".
+
+Command:
+export MY_VAR="Hello, Linux!"
+echo $MY_VAR
+
+Explanation:
+->export creates an environment variable.
+->echo displays the variable value.
