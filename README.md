@@ -22,3 +22,18 @@
 2. Student Grades using Dictionary
 3. Write to a File
 4. Read from a File
+
+# Assignment 03 – Flask and MongoDB
+
+## Features
+- Flask API returning JSON data
+- Backend file integration
+- MongoDB Atlas data insertion
+- Success and error handling
+
+## Technologies Used
+- Python
+- Flask
+- MongoDB Atlas
+- HTML
+
