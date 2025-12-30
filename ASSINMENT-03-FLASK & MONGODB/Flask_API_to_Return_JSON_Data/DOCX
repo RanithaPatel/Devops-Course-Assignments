@@ -1,1 +1,33 @@
+Q1. Flask API to Return JSON Data from Backend File
+Question:
+Create a Flask application with an /api route.
+When the route is accessed, it should:
+Read data from a backend file
+Return the data as a JSON list
 
+Backend File (data.json)
+[
+  {"id": 1, "name": "Apple"},
+  {"id": 2, "name": "Banana"},
+  {"id": 3, "name": "Orange"}
+]
+
+Flask Application (app.py):
+
+from flask import Flask, jsonify
+import json
+app = Flask(__name__)
+@app.route('/api')
+def get_data():
+    with open('data.json', 'r') as file:
+        data = json.load(file)
+    return jsonify(data)
+if __name__ == '__main__':
+    app.run(debug=True)
+
+Explanation:
+Flask is used to create a web application.
+data.json acts as a backend data file.
+json.load() reads data from the file.
+jsonify() converts Python data into JSON response.
+/api route returns the JSON list when accessed.
