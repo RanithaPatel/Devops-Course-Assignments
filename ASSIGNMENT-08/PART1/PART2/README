@@ -1,1 +1,3 @@
-
+Two EC2 instances were defined using Terraform, each with dedicated security groups.
+User data scripts automate application installation and startup.
+Deployment requires AWS credentials; configuration is validated locally.
