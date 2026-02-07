@@ -1,1 +1,125 @@
+AWS Deployment Assignment (Docker-Based Alternative)
+📌 Project Overview
 
+This project demonstrates the deployment of a Flask backend and an Express.js frontend using containerization.
+The goal of the assignment is to understand AWS deployment concepts such as EC2, ECR, ECS, and VPC.
+
+Since creating an AWS account requires debit/credit card verification and was not possible, AWS services were simulated using Docker-based alternatives, which closely mirror real AWS behavior.
+
+🏗️ Architecture Overview
+
+Backend: Flask (Python)
+
+Frontend: Express.js (Node.js)
+
+Containerization: Docker
+
+Orchestration: Docker Compose
+
+Container Registry: Docker Hub
+
+🔄 AWS Services Mapping (Alternative Implementation)
+AWS Service	Purpose	Alternative Used
+EC2 (Single Instance)	Host frontend & backend together	Docker Compose on local machine
+EC2 (Separate Instances)	Host frontend & backend separately	Independent Docker containers
+ECR	Container image registry	Docker Hub
+ECS	Container orchestration	Docker Compose
+VPC	Network isolation	Docker bridge network
+🚀 Deployment Scenarios Implemented
+1️⃣ Flask Backend & Express Frontend on a Single EC2 Instance
+
+Implemented using Docker Compose
+
+Both services run on the same machine and network
+
+Simulates a single EC2 instance
+
+Command used:
+
+docker compose up --build
+
+2️⃣ Flask Backend & Express Frontend on Separate EC2 Instances
+
+Containers run independently
+
+Simulates separate EC2 instances
+
+Commands used:
+
+docker run -d -p 5000:5000 aws-depolyment-assignment-backend
+docker run -d -p 3000:3000 aws-depolyment-assignment-frontend
+
+
+Verification:
+
+docker ps
+
+3️⃣ Dockerized Deployment Using ECR, ECS, and VPC (Simulated)
+
+Images pushed to Docker Hub (ECR equivalent)
+
+Services managed via Docker Compose (ECS equivalent)
+
+Docker networking used as VPC equivalent
+
+Commands:
+
+docker login
+docker tag aws-depolyment-assignment-backend ranithapatel/backend
+docker tag aws-depolyment-assignment-frontend ranithapatel/frontend
+docker push ranithapatel/backend
+docker push ranithapatel/frontend
+
+🌐 Application Access
+
+Frontend: http://localhost:3000
+
+Backend: http://localhost:5000
+
+📂 Project Structure
+aws-depolyment-assignment/
+│
+├── backend-flask/
+│   ├── app.py
+│   ├── Dockerfile
+│   └── requirements.txt
+│
+├── frontend-express/
+│   ├── index.js
+│   ├── Dockerfile
+│   └── package.json
+│
+├── docker-compose.yml
+├── README.md
+└── screenshots/
+
+📸 Screenshots
+
+Screenshots of the following are included:
+
+Docker containers running
+
+Frontend output
+
+Backend output
+
+Docker Hub repositories
+
+⚠️ Note on AWS Account
+
+AWS account creation requires debit/credit card verification even for the Free Tier.
+Due to the unavailability of a card, direct AWS deployment could not be performed.
+
+However, the application is fully containerized and production-ready, and can be deployed on AWS EC2, ECS, and ECR without any code changes.
+
+✅ Conclusion
+
+This project successfully demonstrates:
+
+Backend and frontend containerization
+
+Multi-container deployment
+
+Cloud architecture understanding
+
+AWS deployment concepts through Docker-based simulation.
