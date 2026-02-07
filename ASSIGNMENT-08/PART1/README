@@ -1,4 +1,4 @@
-Terraform Plan Error Explanation
+**Terraform Plan Error Explanation**
 
 Terraform plan failed due to missing AWS credentials.
 An AWS account is required to authenticate and interact with AWS services such as EC2.
