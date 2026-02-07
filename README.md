@@ -37,3 +37,31 @@
 - MongoDB Atlas
 - HTML
 
+📘 Assignment 4 – Git & GitHub Basics
+📌 Description
+This assignment demonstrates the usage of Git and GitHub for version control.
+It covers repository creation, file tracking, committing changes, and pushing code to GitHub.
+
+🛠 Technologies Used
+Git
+GitHub
+Git Bash / Command Line
+
+🚀 Git Commands Used
+git init
+git status
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin <repository-url>
+git push -u origin main
+
+✅ Outcome
+
+Git repository initialized successfully
+Files tracked and committed
+Code pushed to GitHub repository
+
+📌 Conclusion
+
+This assignment helped in understanding basic Git operations and GitHub workflow used in real-world software development.
