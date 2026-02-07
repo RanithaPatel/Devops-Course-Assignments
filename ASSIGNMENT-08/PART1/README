@@ -1,1 +1,8 @@
+Terraform Plan Error Explanation
 
+Terraform plan failed due to missing AWS credentials.
+An AWS account is required to authenticate and interact with AWS services such as EC2.
+Since AWS access keys were not available, Terraform could not generate the execution plan.
+
+However, the Terraform configuration files were validated, and provider initialization was successful using terraform init.
+The error confirms that Terraform correctly attempted to communicate with AWS infrastructure.
