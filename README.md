@@ -37,17 +37,17 @@
 - MongoDB Atlas
 - HTML
 
-📘 Assignment 4 – Git & GitHub Basics
-📌 Description
+**📘 Assignment 4 – Git & GitHub Basics**
+## Description
 This assignment demonstrates the usage of Git and GitHub for version control.
 It covers repository creation, file tracking, committing changes, and pushing code to GitHub.
 
-🛠 Technologies Used
+**Technologies Used**
 Git
 GitHub
 Git Bash / Command Line
 
-🚀 Git Commands Used
+**Git Commands Used**
 git init
 git status
 git add .
@@ -56,41 +56,41 @@ git branch -M main
 git remote add origin <repository-url>
 git push -u origin main
 
-✅ Outcome
+✅**Outcome**
 
 Git repository initialized successfully
 Files tracked and committed
 Code pushed to GitHub repository
 
-📌 Conclusion
+**Conclusion**
 
 This assignment helped in understanding basic Git operations and GitHub workflow used in real-world software development.
 
-📘 Assignment 5 – Docker Basics
-📌 Description
+**Assignment 5 – Docker Basics**
+## Description
 This assignment focuses on Docker fundamentals, including creating a Docker image, running containers, and managing Docker commands.
 
-🛠 Technologies Used
+## Technologies Used
 Docker
 Docker Desktop
 PowerShell / Command Prompt
-✅ Outcome
+## Outcome
 
 Docker image built successfully
 Container created and running
 Application accessible via mapped port
 
-📌 Conclusion
+## Conclusion
 This assignment provided practical knowledge of containerization using Docker and how applications can be packaged and deployed efficiently.
 AWS Deployment Assignment (Docker-Based Alternative)
-📌 Project Overview
+## Project Overview
 
 This project demonstrates the deployment of a Flask backend and an Express.js frontend using containerization.
 The goal of the assignment is to understand AWS deployment concepts such as EC2, ECR, ECS, and VPC.
 
 Since creating an AWS account requires debit/credit card verification and was not possible, AWS services were simulated using Docker-based alternatives, which closely mirror real AWS behavior.
 
-🏗️ Architecture Overview
+## Architecture Overview
 
 Backend: Flask (Python)
 
@@ -102,7 +102,7 @@ Orchestration: Docker Compose
 
 Container Registry: Docker Hub
 
-🔄 ASSIGNMNET-06 AWS Services Mapping (Alternative Implementation)
+## ASSIGNMNET-06 AWS Services Mapping (Alternative Implementation)
 AWS Service	Purpose	Alternative Used
 EC2 (Single Instance)	Host frontend & backend together	Docker Compose on local machine
 EC2 (Separate Instances)	Host frontend & backend separately	Independent Docker containers
@@ -110,9 +110,9 @@ ECR	Container image registry	Docker Hub
 ECS	Container orchestration	Docker Compose
 VPC	Network isolation	Docker bridge network
 
-🚀 Deployment Scenarios Implemented
+## Deployment Scenarios Implemented
 
-1️⃣ Flask Backend & Express Frontend on a Single EC2 Instance
+## Flask Backend & Express Frontend on a Single EC2 Instance
 Implemented using Docker Compose
 Both services run on the same machine and network
 Simulates a single EC2 instance
@@ -121,7 +121,7 @@ Command used:
 
 docker compose up --build
 
-2️⃣ Flask Backend & Express Frontend on Separate EC2 Instances
+## Flask Backend & Express Frontend on Separate EC2 Instances
 
 Containers run independently
 Simulates separate EC2 instances
@@ -133,18 +133,18 @@ docker run -d -p 3000:3000 aws-depolyment-assignment-frontend
 Verification:
 docker ps
 
-3️⃣ Dockerized Deployment Using ECR, ECS, and VPC (Simulated)
+## Dockerized Deployment Using ECR, ECS, and VPC (Simulated)
 
 Images pushed to Docker Hub (ECR equivalent)
 Services managed via Docker Compose (ECS equivalent)
 Docker networking used as VPC equivalent
 
-🌐 Application Access
+## Application Access
 
 Frontend: http://localhost:3000
 Backend: http://localhost:5000
 
-📂 Project Structure
+## Project Structure
 aws-depolyment-assignment/
 │
 ├── backend-flask/
@@ -161,7 +161,7 @@ aws-depolyment-assignment/
 ├── README.md
 └── screenshots/
 
-📸 Screenshots
+## Screenshots
 
 Screenshots of the following are included:
 Docker containers running
@@ -169,13 +169,13 @@ Frontend output
 Backend output
 Docker Hub repositories
 
-⚠️ Note on AWS Account
+## Note on AWS Account
 
 AWS account creation requires debit/credit card verification even for the Free Tier.
 Due to the unavailability of a card, direct AWS deployment could not be performed.
 However, the application is fully containerized and production-ready, and can be deployed on AWS EC2, ECS, and ECR without any code changes.
 
-✅ Conclusion
+## Conclusion
 
 This project successfully demonstrates:
 Backend and frontend containerization
@@ -183,7 +183,7 @@ Multi-container deployment
 Cloud architecture understanding
 AWS deployment concepts through Docker-based simulation
 
-📌 Assignment-07: Description
+## Assignment-07: Description
 
 In this assignment, the Flask frontend and Express backend from the previous assignment were deployed into a local Kubernetes cluster using Minikube.
 Both applications were first containerized using Docker and then deployed as Kubernetes Deployments.
@@ -202,7 +202,7 @@ Communication between frontend and backend inside a Kubernetes environment
 
 The deployment was verified using kubectl commands and browser access via Minikube service URLs.
 
-🔄 Flow Chart (Kubernetes Deployment Flow)
+##  Flow Chart (Kubernetes Deployment Flow)
 Start
   │
   ▼
