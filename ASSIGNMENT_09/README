@@ -1,1 +1,58 @@
+## Deployment Architecture
 
+In this assignment, both the Flask backend and Express frontend are deployed on a single Amazon EC2 instance.
+
+## EC2 Instance Setup
+
+A free-tier EC2 instance was launched and configured with:
+Python → to run Flask backend
+Node.js → to run Express frontend
+Git → to clone application repositories
+Both applications were deployed inside the same server environment but exposed on different ports:
+
+Application	Port
+Flask Backend	5000
+Express Frontend	3000
+Process managers like PM2 were used to ensure applications remain running even after system restart.
+
+## Application Flow
+
+User → EC2 Public IP →
+➡ Express Frontend (Port 3000)
+➡ Flask Backend (Port 5000)
+
+Both services run independently but on the same machine.
+
+### CI/CD Deployment of Flask & Express on EC2:
+This project demonstrates deployment of a Flask backend and Express frontend on a single Amazon EC2 instance with an automated CI/CD pipeline using Jenkins.
+
+## Technologies Used
+
+Amazon EC2
+Jenkins
+GitHub
+Python (Flask)
+Node.js (Express)
+PM2 (Process Manager)
+
+## Deployment Steps
+Launched EC2 Instance
+Installed Python, Node.js and Git
+Cloned Flask & Express repositories
+
+## Installed dependencies:
+pip install -r requirements.txt
+npm install
+
+## Configured apps on ports:
+
+Flask → 5000
+Express → 3000
+Started apps using PM2
+
+## CI/CD Pipeline
+
+Jenkins automates deployment:
+Pulls latest code from GitHub
+Installs dependencies
+Restarts application using PM2
