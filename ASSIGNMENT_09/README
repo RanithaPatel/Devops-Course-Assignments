@@ -24,7 +24,10 @@ User → EC2 Public IP →
 Both services run independently but on the same machine.
 
 ### CI/CD Deployment of Flask & Express on EC2:
-This project demonstrates deployment of a Flask backend and Express frontend on a single Amazon EC2 instance with an automated CI/CD pipeline using Jenkins.
+This project demonstrates deployment of a Flask backend and Express frontend on a single Amazon EC2 instance
+with an automated CI/CD pipeline using Jenkins.
+Since AWS EC2 access was not available, the deployment was simulated locally using PM2 to mimic real production deployment.
+The architecture and deployment flow remain the same as an actual cloud-based implementation.
 
 ## Technologies Used
 
