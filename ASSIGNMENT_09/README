@@ -56,3 +56,33 @@ Jenkins automates deployment:
 Pulls latest code from GitHub
 Installs dependencies
 Restarts application using PM2
+
+## ARCHITECTURE DIAGRAM
+        Developer
+            ↓
+         GitHub
+            ↓
+         Jenkins
+            ↓
+     Install Dependencies
+            ↓
+      Restart Apps (PM2)
+            ↓
+ ┌──────────────────────┐
+ |   Local Server       |
+ |                      |
+ |  Flask → Port 5000   |
+ |  Express → Port 3000 |
+ └──────────────────────┘
+
+User Browser
+     ↓
+Local Server
+ ├── Flask App (5000)
+ └── Express App (3000)
+
+###CI/CD Flow:
+GitHub → Jenkins → PM2 → Apps Running
+
+"""Due to AWS access limitation, deployment was simulated locally using PM2 and Jenkins pipeline. 
+The architecture remains identical to EC2 deployment."""
