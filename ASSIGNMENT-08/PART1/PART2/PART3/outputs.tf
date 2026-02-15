@@ -1,7 +1,7 @@
-output "flask_public_ip" {
-  value = aws_instance.flask.public_ip
+output "flask_container_status" {
+  value = "Flask container deployed locally using Terraform"
 }
 
-output "express_public_ip" {
-  value = aws_instance.express.public_ip
+output "express_container_status" {
+  value = "Express container deployed locally using Terraform"
 }
