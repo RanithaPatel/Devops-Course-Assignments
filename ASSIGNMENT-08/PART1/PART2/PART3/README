@@ -1,1 +1,4 @@
-
+Docker images are built locally and intended to be pushed to Amazon ECR.
+ECS cluster and repositories are defined using Terraform.
+An Application Load Balancer routes traffic to backend and frontend services.
+Infrastructure is fully defined but requires AWS credentials for deployment.
